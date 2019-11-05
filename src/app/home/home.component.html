@@ -1,0 +1,19 @@
+<body>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+
+
+  <mat-grid-tile>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>{{ 'book-search.placeholder' | translate }}</mat-label>
+        <input matInput type="text" (keyup.enter)="onKey($event)" >
+    </mat-form-field>
+    </form>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+</body>

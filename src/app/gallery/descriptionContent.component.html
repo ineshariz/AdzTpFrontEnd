@@ -1,0 +1,33 @@
+<h1>{{ 'title' |translate }} : {{data.volumeInfo.title}}</h1>
+<div class="book">
+  <div class="book-pic">
+    <img [src]="book.volumeInfo.imageLinks?.smallThumbnail ? book.volumeInfo.imageLinks?.smallThumbnail : 'https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' " height="150" width="150" class="img-cover">
+
+  </div>
+
+  <div class="book-details">
+    <p><span class="subtitle">{{ 'publish date' |translate }} : </span>   {{book.volumeInfo.publishedDate}}</p>
+    <p>
+      <span class="subtitle" >{{ 'category' |translate }} : </span>
+      <span *ngFor='let category of book.volumeInfo.categories'>
+                {{category}}
+            </span>
+    </p>
+    <p>
+      <span class="subtitle" >{{ 'authors' |translate  }} : </span>
+      <span *ngFor='let author of book.volumeInfo.authors'>
+                {{author}}
+            </span>
+    </p>
+    <p>
+            <span class="subtitle">
+                Description
+            </span>
+      :{{book.volumeInfo.description ? (book.volumeInfo.description | ellipsis:600) : 'no-description'| translate}}    </p>
+    <p></p>
+
+  </div>
+  <p><a mat-raised-button color="primary" href={{book.volumeInfo.previewLink}}>{{'Click to read online'|translate}} </a></p>
+  <p><a mat-raised-button color="primary"   *ngIf="book.accessInfo.pdf.downloadLink !== undefined"  href={{book.accessInfo.pdf.downloadLink}}>{{'Download Book' |translate}}  </a></p>
+
+</div>

@@ -1,0 +1,42 @@
+
+<div  [formGroup]="bookForm">
+  <div class="card-recherche">
+    <mat-form-field class="full-width">
+      <input matInput placeholder="{{ 'book-search.Input' | translate }}" formControlName="filterName" value="">
+    </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>{{ 'book-search.select' | translate }}</mat-label>
+        <mat-select formControlName="filterSelect">
+          <mat-option  [value]="">
+
+          </mat-option>
+          <mat-option   *ngFor="let book of livres" [value]=book>
+            {{book.volumeInfo.publishedDate}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <div class="return-button">
+      <button mat-flat-button class="mybtn" type="submit" (click)='back()'>{{ 'back' |translate }}</button>
+    </div>
+  </div>
+<div id="grid-layout" fxLayout="row" div clas.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <mat-card class="card-picture"  *ngFor="let x of livres " >
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" >
+
+    </mat-card-title>
+    <div class="colored" (click)="openDialog(x)">
+      <img [src]="x.volumeInfo.imageLinks?.smallThumbnail ? x.volumeInfo.imageLinks?.smallThumbnail : 'https://islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' " class="img-cover" >
+    </div>
+    <div class="overlay">
+      <div class="text">
+        <span fxFlex="80%" class="book-name">{{x.volumeInfo.title}}</span>
+      </div>
+    </div>
+  </mat-card>
+
+</div>
+</div>
+<mat-paginator [length]="totalBooks"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>

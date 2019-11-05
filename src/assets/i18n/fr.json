@@ -1,0 +1,17 @@
+{
+    "book-search.placeholder": "rehercher un livre",
+    "book-search.hint": "appuyez sur Entrée pour chercher",
+    "book-search.error": "nom du livre est obligatoire",
+    "book-search.select":"Seléctionner un livre",
+  "book-search.category":"Seléctionner une categorie",
+  "back":"retour",
+  "search":"rechercher",
+  "Download Book":"Télécharger le livre",
+  "book-search.Input":"Recherche par Categorie, Auteur ou Titre",
+  "publish date":"Date de publication",
+  "no-description":"pas de description disponible",
+    "authors":"Auteurs",
+    "category":"categorie",
+    "title":"Titre",
+  "Click to read online":"Cliquer pour lire seulement"
+  }

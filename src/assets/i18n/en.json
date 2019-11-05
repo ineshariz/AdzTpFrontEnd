@@ -1,0 +1,17 @@
+{
+    "book-search.placeholder": "Search a book",
+    "book-search.hint": "Hit enter to search for a book",
+    "book-search.error": "Name is required",
+    "book-search.select":"Select a book",
+  "book-search.category":"Select a category",
+  "search":"search",
+  "book-search.Input":"Select Category,Author or Title",
+  "Download Book":"Download Book",
+  "Click to read online":"Click to read online",
+  "publish date":"Publish date",
+  "back":"back",
+    "no-description":"No available description",
+    "authors":"Authors",
+    "category":"Category",
+    "title":"Title"
+  }
