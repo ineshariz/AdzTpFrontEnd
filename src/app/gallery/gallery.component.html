@@ -8,7 +8,7 @@
         <mat-label>{{ 'book-search.select' | translate }}</mat-label>
         <mat-select formControlName="filterSelect">
           <mat-option  [value]="">
-
+            {{ 'all date' |translate }}
           </mat-option>
           <mat-option   *ngFor="let book of livres" [value]=book>
             {{book.volumeInfo.publishedDate}}
